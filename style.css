@@ -1,0 +1,184 @@
+html{
+    font-family: 'Times New Roman';
+}
+
+@font-face {
+    font-family: 'Acquire';
+    src: url('fonts/AcquireBold.otf');
+    
+}
+
+@font-face {
+    font-family: 'Capsule';
+    src: url('fonts/Capsule.ttf');
+}
+
+@font-face {
+    font-family: 'DoFuturistic';
+    src: url('fonts/DoFuturistic.ttf');
+}
+
+/* The title was done with help from chat-gpt. Prompt: How do you create a centered title in a box using html
+and css? I hoped to get a nice centered title div, but the output was not centered correctly, which I needed to fix*/
+
+.header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-box {
+    display: inline-block; /*added this personally*/
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /*Border design follows the rest of the page based on class example*/
+    border: 10px solid white; 
+    background-color: hsla(275, 70%, 60%, 1);
+    box-shadow: 1px 2px 4px;
+    padding: 10px;
+    width: auto;
+    margin-bottom: 10px;
+}
+  
+.title {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Acquire', 'Times New Roman';
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#gap {
+    margin-top: 0px;
+}
+#toggle-button{
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+/*Added from GPT (explanation in index.html)*/
+.toc-box {
+    padding: 10px;
+    border: 10px solid white;
+    background-color: hsl(178, 80%, 60%, 1);
+    box-shadow: 1px 2px 4px;
+    margin-bottom: 10px;
+}
+
+.toc-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.toc-list li {
+    margin-bottom: 5px;
+}
+
+.toc-list a:hover {
+    font-weight: bold;
+}
+
+.sec-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'DoFuturistic', 'Times New Roman';
+    font-size: 30px;
+}
+
+.project {
+    padding: 10px;
+    border: 10px solid white;
+    background-color: hsla(150, 50%, 80%, 1);
+    box-shadow: 1px 2px 4px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+.projInfo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0px auto;
+    /*background-color: hsla(232, 60%, 70%, 1);*/
+    transition: all .2s;
+    /*box-shadow: 1px 2px 4px black;
+    border: 10px solid white;
+    border-radius: 20px;*/
+    padding:0px;
+}
+
+.projInfo.hidden {
+    width: 50%;
+}
+
+.projectExp {
+    margin: 20px;
+    width: 100%;
+    font-size: larger;
+}
+
+
+.projInfo.hidden .projectExp{
+    display: none;
+}
+
+.projInfo.hidden .Image{
+    margin-left: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.projInfo .Image{
+    margin-left: 20px;
+    transition: margin 0.5s ease;
+    text-align: center;
+    
+}
+
+/*Any img inside #profilepic*/
+.Image img{
+    box-shadow: 1px 2px 4px black;
+    border: 10px solid white;
+    border-radius: 20px;
+    width: 75%;
+    align-items: center;    
+    margin-top: -10px;
+    margin-bottom: 10px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Image img:hover{
+    background-color: hsla(232, 60%, 60%,1);
+    transform: scale(1.2);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
